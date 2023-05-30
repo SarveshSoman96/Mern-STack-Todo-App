@@ -3,11 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 
 const cors = require("cors");
+require("dotenv").config()
 
 app.use(cors());
 app.use(express.json());
-
-mongoose.connect("mongodb+srv://SarveshSoman:sarveshtodoDB@todocluster.pmiscq8.mongodb.net/DailyTodo?retryWrites=true&w=majority", 
+mongoose.connect(`mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@todocluster.pmiscq8.mongodb.net/DailyTodo?retryWrites=true&w=majority`, 
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -35,7 +35,7 @@ app.post("/todos/new", async (req, res) => {
   
       res.json(todo);
     } catch (error) {
-      res.status(500).json({ message: "Failed to create todo" });
+      res.status(500).json({ message: "Failed to create tozdo" });
     }
   });
 
