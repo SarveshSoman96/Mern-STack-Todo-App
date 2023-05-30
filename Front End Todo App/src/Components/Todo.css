@@ -1,0 +1,108 @@
+.todo_info_wrapper{
+    padding: 10px;
+    border: 1px solid var(--primary);
+    font-family: 'Lato', sans-serif;
+    border-radius: var(--radius);
+    margin-block: var(--radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.todo_info_wrapper > p{
+    font-size: 1rem;
+}
+
+.todo_info{
+    gap: 5px;
+}
+
+
+.todo_info_wrapper p{
+    font-size: 1.1rem;
+}
+.todo_info_wrapper p.info{
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.todo_info_wrapper .todo_modify_btns{
+    justify-content: flex-end;
+}
+
+.todo_info_wrapper .todo_modify_btns button{
+    all: unset;
+    border: 1px solid var(--text-secondary);
+    padding: 5px 10px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.todo_info_wrapper .todo_modify_btns button#check_btn{
+    color: var(--text-secondary);
+    border-radius: 5px 0 0 5px;
+}
+
+.todo_info_wrapper .todo_modify_btns button#delete_btn{
+    color: var(--trash-icon);
+    border-radius: 0 5px 5px 0;
+}
+
+.completed{
+    border-radius: 5px !important;
+}
+
+.todo_info_wrapper .todo_modify_btns button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.todo_info_wrapper .edit_todo{
+    all: unset;
+    display: inline-block;
+    padding: 8px 20px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var(--radius);
+    border: 1px solid var(--primary);
+}
+
+.todo_info_wrapper .todo_modify_btns button:hover{
+    background-color: var(--primary);
+    color: var(--text-heading) !important;
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    .todo_info_wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .todo_info_wrapper .todo_modify_btns{
+        justify-content: flex-start;
+    }
+
+    .todo_info_wrapper .edit_todo{
+        display: block;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .todo_info_wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .todo_info_wrapper .todo_modify_btns{
+        justify-content: flex-start;
+    }
+
+    .todo_info_wrapper .edit_todo{
+        display: block;
+        width: 100%;
+    }
+}

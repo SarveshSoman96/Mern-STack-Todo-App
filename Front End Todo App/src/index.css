@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@700&display=swap');
+
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary: #3F51B5;
+  --text-primary: #000;
+  --text-secondary: rgb(171, 168, 168);
+  --text-heading: #fff;
+  --radius: 10px;
+  --container-width: 600px;
+
+  --trash-icon: #F52955;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+.flex_1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex_3{
+  display: flex;
+  flex-direction: column;
+}
+

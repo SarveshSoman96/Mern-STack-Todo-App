@@ -1,0 +1,34 @@
+.todo_input_form{
+    padding: 20px;
+    box-shadow: 0 0 10px var(--primary);
+    max-width: 600px;
+    width: 100%;
+    border-radius: var(--radius);
+    gap: 1rem;
+}
+
+.todo_input_form input{
+    all: unset;
+    display: inline-block;
+    padding: 8px 20px;
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--primary);
+}
+
+.todo_input_form .add_btn{
+    all: unset;
+    padding: 10px 25px;
+    color: white;
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.todo_input_form .add_btn:hover{
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+}

@@ -1,0 +1,18 @@
+
+
+.container{
+  max-width: 1208px;
+  padding: 0 40px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.todo_form_list_section{
+  padding: 50px 0; 
+  gap: 2rem;
+}
