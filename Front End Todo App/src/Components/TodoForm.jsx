@@ -38,4 +38,4 @@ const TodoForm = ({setallTodos}) => {
   )
 }
 
-export default TodoForm;
+export default React.memo(TodoForm);

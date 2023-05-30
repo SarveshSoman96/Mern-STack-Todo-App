@@ -83,4 +83,18 @@ app.delete("/todos/delete/:id", async (req, res) => {
     }
   });
 
+  app.delete("/todos/clearData", async (req, res) => {
+    try {
+      const todo = await TodoModel.deleteMany({});
+      if (todo) {
+        res.status(200).json(todo);
+      } else {
+        res.status(404).json({ message: "Todo not found" });
+      }
+    } catch (error) {
+      res.status(500).json({ message: "Server error" });
+    }
+  });
+
+
 app.listen(5000, () => console.log("Server is running"))

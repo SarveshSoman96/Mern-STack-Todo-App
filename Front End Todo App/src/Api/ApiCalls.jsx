@@ -35,7 +35,6 @@ export const deleteTodo = (setallTodo, todoId) => {
 
     Axios.delete(`http://localhost:5000/todos/delete/${todoId}`)
     .then((res) => {
-        // console.log(res)
         getAllTodo(setallTodo)
         }
 
@@ -71,4 +70,10 @@ export const updateTodo = (todoId, editTodo, setallTodos, setEditTodo, setIsUpda
       getAllTodo(setallTodos)
     })
     .catch(err => console.log(err))
+};
+
+export const clearCollection = () => {
+  Axios.delete("http://localhost:5000/todos/clearData")
+  .then(res => console.log(res))
+  .catch(err => console.log(err))
 };

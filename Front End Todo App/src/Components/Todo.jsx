@@ -12,7 +12,7 @@ const Todo = ({key, todoData, setallTodos}) => {
 
   return (
 
-    <div className={`todo_info_wrapper`}>
+    <>
                 {
                     !isUpdating ? (
                         
@@ -58,8 +58,8 @@ const Todo = ({key, todoData, setallTodos}) => {
                     )
             }
         </div>
-    </div>
+    </>
   )
 }
 
-export default Todo;
+export default React.memo(Todo);

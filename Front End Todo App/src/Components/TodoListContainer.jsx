@@ -1,8 +1,11 @@
 import "./TodoListContainer.css";
-import Todo from './Todo';
 import React , { useEffect, useState } from "react";
-import TodoForm from "./TodoForm";
 import { getAllTodo } from "../Api/ApiCalls";
+
+const TodoForm = React.lazy(() => import("./TodoForm"));
+const Todo = React.lazy(() => import("./Todo"));
+// import Todo from './Todo';
+// import TodoForm from "./TodoForm";
 
 const TodoListContainer = () => {
   const [allTodos, setallTodos] = useState([]);
@@ -24,7 +27,9 @@ const TodoListContainer = () => {
 
                 {
                   allTodos.map( (todo) => (
-                    <Todo key={todo._id} todoData={todo} setallTodos={setallTodos} />
+                    <div key={todo._id} className="todo_info_wrapper">
+                      <Todo  todoData={todo} setallTodos={setallTodos} />
+                    </div>
                   ))
                 }
               </>
@@ -41,4 +46,4 @@ const TodoListContainer = () => {
   )
 }
 
-export default TodoListContainer;
+export default React.memo(TodoListContainer);

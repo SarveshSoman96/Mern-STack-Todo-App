@@ -1,6 +1,7 @@
-import Navbar from './Components/Navbar'
-import './App.css'
-import TodoListContainer from './Components/TodoListContainer'
+import React from 'react';
+import './App.css';
+const Navbar = React.lazy(() => import("./Components/Navbar"));
+const TodoListContainer = React.lazy(() => import("./Components/TodoListContainer"))
 
 function App() {
 
